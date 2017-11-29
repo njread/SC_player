@@ -11,7 +11,6 @@ UI.enterclick = function (text){
 }
 
 
-
 soundcloudAPI.init = function() {
 
  SC.initialize({
