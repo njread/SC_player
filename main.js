@@ -9,14 +9,13 @@ UI.enterclick = function (text){
     console.log(text);
     soundcloudAPI.getTracks(text);
 }
-
-
 soundcloudAPI.init = function() {
 
  SC.initialize({
  	client_id: 'cd9be64eeb32d1741c17cb39e41d254d'
  });
 }
+
 soundcloudAPI.init();
 
 soundcloudAPI.getTracks = function(text){
@@ -27,7 +26,6 @@ soundcloudAPI.getTracks = function(text){
  	soundcloudAPI.renderTracks(tracks);
  });
 }
- 	
 
 soundcloudAPI.renderTracks = function(tracks){
 		tracks.forEach(function(track){
@@ -71,7 +69,6 @@ soundcloudAPI.renderTracks = function(tracks){
 		searchResults.appendChild(card);
 
 		});
-
 }
 
 soundcloudAPI.getEmbed = function(trackURL){
@@ -81,12 +78,11 @@ SC.oEmbed(trackURL, {
 }).then(function(embed){
   console.log('oEmbed response: ', embed);
   var sideBar = document.querySelector('.js-playlist');
-
-  var box = document.createElement('div');
-  box.innerHTML = embed.html;
-  sideBar.insertBefore(box, sideBar.firstChild);
-  localStorage.setItem("key", sideBar.innerHTML);
-});
+  	var box = document.createElement('div');
+  	box.innerHTML = embed.html;
+  	sideBar.insertBefore(box, sideBar.firstChild);
+  	localStorage.setItem("key", sideBar.innerHTML);
+	});
 }
 
 var sideBar = document.querySelector('.js-playlist');
