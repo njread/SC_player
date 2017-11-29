@@ -10,9 +10,7 @@ UI.enterclick = function (text){
     soundcloudAPI.getTracks(text);
 }
 
-UI.submitclick = function(){
 
-}
 
 soundcloudAPI.init = function() {
 
