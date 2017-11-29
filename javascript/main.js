@@ -4,7 +4,7 @@
 var UI = {};
 var soundcloudAPI = {};
 
-function enterclick(text){
+ UI.enterclick = function(text){
     var text = document.getElementById('input1').value;
     console.log(text);
     soundcloudAPI.getTracks(text);
